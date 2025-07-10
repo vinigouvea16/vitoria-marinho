@@ -6,16 +6,7 @@ import {
   AccordionContent,
 } from '@radix-ui/react-accordion'
 import { Separator } from '@radix-ui/react-separator'
-import {
-  Brain,
-  Camera,
-  Drone,
-  Heart,
-  LaptopMinimalCheck,
-  Shield,
-  Star,
-  Zap,
-} from 'lucide-react'
+import { Brain, Camera, Drone, LaptopMinimalCheck } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -326,7 +317,7 @@ function FAQ() {
       id="faq"
       className="h-screen bg-vitoria-beige flex flex-col items-center gap-12"
     >
-      <h3 className="text-5xl text-vitoria-text mt-40">
+      <h3 className="lg:text-5xl text-3xl text-vitoria-text mt-40 text-center lg:text-left">
         {' '}
         Perguntas Frequentes
       </h3>

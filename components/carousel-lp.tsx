@@ -20,9 +20,9 @@ export function CarouselLP() {
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-          <CarouselItem key={index} className="md:basis-1/2 ">
+          <CarouselItem key={index} className="md:basis-1/2 basis-1/1">
             <div className="p-1">
-              <Card className="bg-vitoria-text h-fit rounded-[40px]">
+              <Card className="bg-vitoria-text lg:h-fit rounded-[40px]">
                 <CardContent className="flex flex-col aspect-square items-center justify-between py-12 px-8 ">
                   <div className="text-vitoria-brown text-lg font-light">
                     <p>
