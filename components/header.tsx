@@ -1,0 +1,142 @@
+'use client'
+
+import Image from 'next/image'
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
+  const handleNavClick = (id: string) => {
+    const section = document.querySelector(id)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+    closeMenu()
+  }
+
+  return (
+    <>
+      {/* Header Desktop */}
+      <div className="rounded-4xl z-20 bg-vitoria-brown/50 hidden lg:flex items-center w-fit p-2 fixed top-14 left-16 text-lg overflow-hidden">
+        <a href="#hero">
+          <Image
+            src="/logo1.png"
+            width={255}
+            height={77}
+            alt="logo da psiquiatra vitoria marinho"
+            className="w-[255px] h-[77px] object-contain"
+          />
+        </a>
+        <div className="text-vitoria-text justify-between flex gap-4 p-4">
+          <button
+            type="button"
+            onClick={() => handleNavClick('#about')}
+            className="hover:text-white hover:underline underline-offset-4"
+          >
+            sobre
+          </button>
+          <div className="w-[1px] bg-vitoria-text" />
+          <button
+            type="button"
+            onClick={() => handleNavClick('#feedbacks')}
+            className="hover:text-white hover:underline underline-offset-4"
+          >
+            feedbacks
+          </button>
+          <div className="w-[1px] bg-vitoria-text" />
+          <button
+            type="button"
+            onClick={() => handleNavClick('#faq')}
+            className="hover:text-white hover:underline underline-offset-4"
+          >
+            faq
+          </button>
+          <div className="w-[1px] bg-vitoria-text" />
+          <button
+            type="button"
+            onClick={() => handleNavClick('#contato')}
+            className="hover:text-white hover:underline underline-offset-4"
+          >
+            contato
+          </button>
+        </div>
+      </div>
+
+      {/* Header Mobile */}
+      <div className="lg:hidden fixed flex top-6 right-4 z-50">
+        <button
+          type="button"
+          onClick={toggleMenu}
+          className="w-16 h-16 border-vitoria-yellow border-[1.5px] bg-vitoria-brown/80 rounded-full flex items-center justify-center text-vitoria-text hover:bg-vitoria-brown transition-colors"
+          aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+        >
+          {isMenuOpen ? (
+            <X size={24} strokeWidth={1} />
+          ) : (
+            <Menu size={48} strokeWidth={1} className="text-vitoria-yellow" />
+          )}
+        </button>
+      </div>
+
+      {/* Logo Mobile */}
+      <div className="lg:hidden fixed top-8 left-8 z-50">
+        <a href="#hero">
+          <Image
+            src="/logo1.png"
+            width={120}
+            height={54}
+            alt="logo da psiquiatra vitoria marinho"
+            className="w-[120px] h-[54px] object-contain"
+          />
+        </a>
+      </div>
+
+      {/* Menu Mobile Overlay */}
+      {isMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm">
+          <div className="absolute top-24 left-4 right-4 bg-vitoria-brown/95 rounded-3xl p-8 shadow-2xl">
+            <nav className="flex flex-col space-y-6">
+              <button
+                type="button"
+                onClick={() => handleNavClick('#about')}
+                className="text-vitoria-text text-xl hover:text-white transition-colors border-b border-vitoria-text/30 pb-3 text-left"
+              >
+                sobre
+              </button>
+              <button
+                type="button"
+                onClick={() => handleNavClick('#feedbacks')}
+                className="text-vitoria-text text-xl hover:text-white transition-colors border-b border-vitoria-text/30 pb-3 text-left"
+              >
+                feedbacks
+              </button>
+              <button
+                type="button"
+                onClick={() => handleNavClick('#faq')}
+                className="text-vitoria-text text-xl hover:text-white transition-colors border-b border-vitoria-text/30 pb-3 text-left"
+              >
+                faq
+              </button>
+              <button
+                type="button"
+                onClick={() => handleNavClick('#contato')}
+                className="text-vitoria-text text-xl hover:text-white transition-colors text-left"
+              >
+                contato
+              </button>
+            </nav>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
