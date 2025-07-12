@@ -1,20 +1,18 @@
-import { Card, CardContent } from '@/components/ui/card'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
-import { LaptopMinimalCheck, Brain } from 'lucide-react'
+import { LaptopMinimalCheck } from 'lucide-react'
 import Image from 'next/image'
+import CrisesDePanico from './svgs/custom-svgs/crises-de-panico'
+import Energia from './svgs/custom-svgs/energia'
+import Pensamentos from './svgs/custom-svgs/pensamentos'
+import Compulsao from './svgs/custom-svgs/compulsao'
+import Dormir from './svgs/custom-svgs/dormir'
+import EspacoSeguro from './svgs/custom-svgs/espaco-seguro'
 
 export default function Hero() {
   return (
-    <>
+    <div className="">
       <MainHero />
       <SubHero />
-    </>
+    </div>
   )
 }
 
@@ -26,8 +24,8 @@ function MainHero() {
         className="lg:h-screen h-[80vh] relative overflow-hidden lg:grid lg:grid-cols-2 bg-vitoria-brown text-vitoria-text"
       >
         <div className="m-auto flex flex-col items-center lg:gap-20 gap-10 relative z-10">
-          <div className="flex justify-center align-middle mt-30">
-            <p className="lg:text-4xl lg:w-2/3 text-2xl text-center">
+          <div className="flex justify-center align-middle mt-24">
+            <p className="lg:text-4xl lg:w-2/3 text-2xl w-2/3 lg:text-left text-center">
               Reconquiste seu{' '}
               <span className="italic font-bold">equilibro emocional</span> com
               cuidado, e acolhimento
@@ -35,8 +33,8 @@ function MainHero() {
           </div>
 
           {/* Div amarela - apenas desktop */}
-          <div className="rounded-3xl p-8 bg-vitoria-yellow w-2/3 text-2xl hidden lg:block">
-            <p className="font-light text-white/75 w-[90%]">
+          <div className="rounded-3xl px-14 py-8 bg-vitoria-yellow w-2/3 text-2xl hidden lg:block">
+            <p className="font-light text-white/75 w-[85%]">
               Atendimento individualizado com a Dra. Vitória Marinho, psiquiatra
               que une{' '}
               <span className="text-vitoria-brown font-semibold">
@@ -70,10 +68,9 @@ function MainHero() {
         </div>
       </div>
 
-      {/* Div amarela - mobile - posicionada entre hero e subhero */}
       <div className="lg:hidden absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-30 w-[85%]">
-        <div className="rounded-3xl p-6 bg-vitoria-yellow text-lg">
-          <p className="font-light text-white/75">
+        <div className="rounded-3xl p-8 bg-vitoria-yellow text-xl">
+          <p className="font-light text-white/65 text-center">
             Atendimento individualizado com a Dra. Vitória Marinho, psiquiatra
             que une{' '}
             <span className="text-vitoria-brown font-semibold">
@@ -89,19 +86,52 @@ function MainHero() {
 
 function SubHero() {
   return (
-    <div className="h-screen bg-vitoria-beige flex flex-col items-center justify-evenly lg:pt-0">
-      <h2 className="lg:text-6xl text-3xl text-center w-2/3 text-vitoria-text lg:mt-20">
+    <div className="lg:h-screen py-30 lg:py-0 bg-vitoria-beige flex flex-col items-center justify-evenly lg:justify-evenly lg:pt-0">
+      <h2 className="lg:text-5xl text-2xl text-center w-2/3 text-vitoria-text lg:mt-20">
         {' '}
         Minha consulta é para você, que:
       </h2>
-      <div className="lg:flex items-center align-middle gap-3 h-[50vh] mx-28 hidden">
-        <CardTwo />
-        <CardTwo />
-        <CardTwo />
-        <CardTwo />
+      <div className="lg:flex-row items-center align-middle gap-3 lg:h-[40vh] lg:mx-28 flex flex-col my-8 lg:my-0">
+        <CardTwo
+          cardClassName="bg-vitoria-text border"
+          icon={<CrisesDePanico className="h-20 w-20" />}
+        >
+          Sente que a ansiedade está dominando seus dias
+        </CardTwo>
+        <CardTwo
+          cardClassName="bg-vitoria-brown border-vitoria-yellow lg:bg-vitoria-text border"
+          textClassName="lg:text-vitoria-brown text-vitoria-text"
+          icon={<Energia className="h-20 w-20" />}
+        >
+          Tem vivido crises de pânico que paralisa sua rotina
+        </CardTwo>
+        <CardTwo
+          cardClassName="bg-vitoria-text border"
+          icon={<Pensamentos className="h-20 w-20" />}
+        >
+          Está sem energia e motivação por causa da depressão
+        </CardTwo>
+        <CardTwo
+          cardClassName="bg-vitoria-brown border-vitoria-yellow lg:bg-vitoria-text border"
+          textClassName="lg:text-vitoria-brown text-vitoria-text"
+          icon={<Compulsao className="h-20 w-20" />}
+        >
+          Vive um ciclo de compulsão alimentar
+        </CardTwo>
+        <CardTwo
+          cardClassName="bg-vitoria-text border"
+          icon={<Dormir className="h-20 w-20" />}
+        >
+          Não consegue dormir bem, mesmo exausto(a)
+        </CardTwo>
+        <CardTwo
+          icon={<EspacoSeguro className="h-20 w-20" />}
+          cardClassName="bg-vitoria-brown border border-vitoria-yellow"
+          textClassName="text-vitoria-text"
+        >
+          Busca um espaço seguro para falar sobre o que sente
+        </CardTwo>
       </div>
-
-      <CarouselSubHero />
 
       <div className="flex py-2 px-4 items-center justify-center text-xl border-[1px] border-vitoria-text gap-2 rounded-xl lg:mb-20">
         <LaptopMinimalCheck
@@ -118,51 +148,41 @@ function SubHero() {
   )
 }
 
-function CardTwo() {
-  return (
-    <div className="rounded-[70px] bg-vitoria-text flex flex-col items-center justify-center space-y-4 border-[1px] border-[#707070] h-full">
-      <Brain size={100} strokeWidth={1} className="text-vitoria-yellow" />
-      <p className="text-vitoria-brown text-2xl text-center w-4/5">
-        Sente que a ansiedade está dominando seus dias
-      </p>
-    </div>
-  )
+interface CardTwoProps {
+  children: string
+  icon: React.ReactNode
+  cardClassName?: string
+  iconContainerClassName?: string
+  textClassName?: string
 }
 
-function CarouselSubHero() {
+function CardTwo({
+  children,
+  icon,
+  cardClassName,
+  iconContainerClassName,
+  textClassName,
+}: CardTwoProps) {
   return (
-    <Carousel
-      opts={{
-        align: 'start',
-      }}
-      className="w-full max-w-sm md:max-w-4xl mx-auto block lg:hidden"
+    <div
+      className={`2xl:rounded-[70px] xl:rounded-[50px] rounded-[40px] max-w-[300px] px-4 py-6 lg:px-0 lg:py-0 lg:max-w-none flex flex-col items-center justify-center space-y-4 border-[1px] border-[#707070] h-full ${
+        cardClassName || ''
+      }`}
     >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem
-            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-            key={index}
-            className="pl-4 md:pl-4 basis-full md:basis-1/2"
-          >
-            <div className="p-1">
-              <Card className="rounded-[70px] bg-vitoria-text flex flex-col items-center justify-center space-y-4 border-[1px] border-[#707070] h-full">
-                <CardContent className="flex flex-col items-center justify-around p-6 min-h-[300px]">
-                  <Brain
-                    size={100}
-                    strokeWidth={1}
-                    className="text-vitoria-yellow"
-                  />
-                  <p className="text-vitoria-brown text-2xl text-center w-4/5">
-                    Sente que a ansiedade está dominando seus dias
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="h-12 w-12 border-none bg-vitoria-brown text-vitoria-text hover:bg-vitoria-brown/90 -left-3" />
-      <CarouselNext className="h-12 w-12 border-none bg-vitoria-brown text-vitoria-text hover:bg-vitoria-brown/90 -right-3" />
-    </Carousel>
+      <div
+        className={`flex items-center justify-center ${
+          iconContainerClassName || ''
+        }`}
+      >
+        {icon}
+      </div>
+      <p
+        className={`text-vitoria-brown xl:text-lg lg:text-base 2xl:text-xl text-center w-4/5 ${
+          textClassName || ''
+        }`}
+      >
+        {children}
+      </p>
+    </div>
   )
 }

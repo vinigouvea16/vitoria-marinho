@@ -17,7 +17,7 @@ function AboutIntro() {
       className="lg:h-screen h-[80vh] relative overflow-hidden bg-vitoria-text flex overflow-x-hidden text-vitoria-brown"
     >
       <div className="lg:my-auto lg:ml-40 mx-auto flex flex-col space-y-14 lg:w-[40%] w-[80%]">
-        <h1 className="lg:text-5xl text-2xl mt-32 text-center">
+        <h1 className="lg:text-5xl text-2xl mt-32 text-center lg:text-left">
           <b className="italic">Quem</b> vai te acompanhar nessa jornada?
         </h1>
         <div className="space-y-4 hidden lg:block text-lg/9 w-[90%]">

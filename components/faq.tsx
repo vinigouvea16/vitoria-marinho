@@ -1,10 +1,10 @@
+import { Drone } from 'lucide-react'
 import {
   Accordion,
   AccordionItem,
-  AccordionTrigger,
   AccordionContent,
-} from '@radix-ui/react-accordion'
-import { Drone } from 'lucide-react'
+  AccordionTrigger,
+} from './ui/accordion'
 
 export default function FAQ() {
   return (
@@ -30,7 +30,7 @@ export default function FAQ() {
                 </span>
               </AccordionTrigger>
               <AccordionContent className="px-8 pb-6 pt-0">
-                <div className="flex flex-col gap-4 text-vitoria-brown">
+                <div className="flex flex-col gap-4 text-vitoria-brown text-lg ">
                   <p>
                     Nossa consulta online combina tecnologia de ponta com
                     atendimento personalizado. Construída com materiais premium,
@@ -57,7 +57,7 @@ export default function FAQ() {
                 </span>
               </AccordionTrigger>
               <AccordionContent className="px-8 pb-6 pt-0">
-                <div className="flex flex-col gap-4 text-vitoria-brown">
+                <div className="flex flex-col gap-4 text-vitoria-brown text-lg ">
                   <p>
                     Oferecemos atendimento mundial através de parceiros de
                     confiança. O atendimento padrão leva de 3-5 minutos,
@@ -85,7 +85,7 @@ export default function FAQ() {
                 </span>
               </AccordionTrigger>
               <AccordionContent className="px-8 pb-6 pt-0">
-                <div className="flex flex-col gap-4 text-vitoria-brown">
+                <div className="flex flex-col gap-4 text-vitoria-brown text-lg ">
                   <p>
                     Apoiamos nossos serviços com uma política abrangente de 30
                     dias. Se você não estiver completamente satisfeito, pode

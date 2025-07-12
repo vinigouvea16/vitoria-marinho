@@ -1,11 +1,34 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  useEffect(() => {
+    const controlHeader = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+        setIsMenuOpen(false)
+      }
+
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', controlHeader)
+
+    return () => {
+      window.removeEventListener('scroll', controlHeader)
+    }
+  }, [lastScrollY])
 
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev)
@@ -26,7 +49,11 @@ export default function Header() {
   return (
     <>
       {/* Header Desktop */}
-      <div className="rounded-4xl z-20 bg-vitoria-brown/50 hidden lg:flex items-center w-fit p-2 fixed top-14 left-16 text-lg overflow-hidden">
+      <div
+        className={`rounded-4xl z-20 bg-vitoria-brown/50 hidden lg:flex items-center w-fit p-2 fixed top-14 left-16 text-lg overflow-hidden transition-transform duration-500 ${
+          isVisible ? 'translate-y-0' : '-translate-y-40'
+        }`}
+      >
         <a href="#hero">
           <Image
             src="/logo1.png"
@@ -72,7 +99,11 @@ export default function Header() {
       </div>
 
       {/* Header Mobile */}
-      <div className="lg:hidden fixed flex top-6 right-4 z-50">
+      <div
+        className={`lg:hidden fixed flex top-6 right-4 z-50 transition-transform duration-300 ${
+          isVisible ? 'translate-y-0' : '-translate-y-22'
+        }`}
+      >
         <button
           type="button"
           onClick={toggleMenu}
@@ -88,7 +119,11 @@ export default function Header() {
       </div>
 
       {/* Logo Mobile */}
-      <div className="lg:hidden fixed top-8 left-8 z-50">
+      <div
+        className={`lg:hidden fixed top-8 left-8 z-50 transition-transform duration-300 ${
+          isVisible ? 'translate-y-0' : '-translate-y-22'
+        }`}
+      >
         <a href="#hero">
           <Image
             src="/logo1.png"
