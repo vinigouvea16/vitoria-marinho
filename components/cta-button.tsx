@@ -6,7 +6,7 @@ export function CTAButton({ className = '', ...props }) {
       {/* Desktop */}
       <button
         type="button"
-        className="hidden lg:block bg-vitoria-yellow text-vitoria-brown px-8 py-4 rounded-3xl border-[1px] border-white text-xl hover:brightness-110 hover:cursor-pointer w-2/3 mr-4"
+        className="hidden lg:block bg-vitoria-yellow text-vitoria-brown px-8 py-5 rounded-2xl border-[1px] border-white text-xl hover:brightness-110 hover:cursor-pointer"
         {...props}
       >
         Quero agendar minha consulta

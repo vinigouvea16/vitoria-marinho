@@ -1,5 +1,5 @@
-import { Brain } from 'lucide-react'
 import Image from 'next/image'
+import Borboleta from './svgs/custom-svgs/borboleta'
 
 export default function About() {
   return (
@@ -16,11 +16,11 @@ function AboutIntro() {
       id="about"
       className="lg:h-screen h-[80vh] relative overflow-hidden bg-vitoria-text flex overflow-x-hidden text-vitoria-brown"
     >
-      <div className="lg:my-auto lg:ml-40 mx-auto flex flex-col space-y-14 lg:w-[40%] w-[80%]">
-        <h1 className="lg:text-5xl text-2xl mt-32 text-center lg:text-left">
+      <div className="lg:my-auto lg:ml-40 mx-auto flex flex-col space-y-14 lg:w-[38%] w-[80%]">
+        <h1 className="lg:text-4xl text-2xl mt-32 lg:mt-0 text-center lg:text-left mb-20">
           <b className="italic">Quem</b> vai te acompanhar nessa jornada?
         </h1>
-        <div className="space-y-4 hidden lg:block text-lg/9 w-[90%]">
+        <div className="space-y-4 hidden lg:block text-base/9 w-[90%]">
           <p className="">
             Sou a Dra. Vitória Marinho, médica psiquiatra, formada pela
             Universidade Potiguar e residente em psiquiatria pelo HC-UFPR. Meu
@@ -55,7 +55,7 @@ function AboutIntro() {
 
 function Benefits() {
   return (
-    <div className="h-full bg-vitoria-brown items-center flex flex-col">
+    <div className="h-full lg:h-screen bg-vitoria-brown items-center justify-evenly flex flex-col">
       <h1 className="text-vitoria-text text-4xl lg:mt-20 hidden lg:block">
         Benefícios do atendimento
       </h1>
@@ -81,20 +81,20 @@ function Benefits() {
           </div>
           <div className="lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-12 lg:h-[550px] flex flex-col-reverse gap-8 px-4">
             {/* Card A - Top Left */}
-            <div className="relative bg-transparent rounded-[70px] shadow-lg border border-vitoria-text lg:flex items-center justify-center group hover:shadow-xl transition-shadow duration-300 p-12 lg:p-0 hidden">
-              <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-vitoria-yellow rounded-full p-2 shadow-lg">
-                <Brain className="w-12 h-12 text-white" strokeWidth={1} />
+            <div className="relative bg-transparent lg:rounded-[70px] rounded-[45px] shadow-lg border border-vitoria-text lg:flex items-center justify-center group hover:shadow-xl transition-shadow duration-300 p-12 lg:p-0 hidden">
+              <div className="absolute lg:-left-8 -left-6 top-1/2 transform -translate-y-1/2 bg-vitoria-yellow rounded-full p-2 shadow-lg">
+                <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
                 <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
-                  Acompanhamento próximo, com plano terapeutico ajustado a sua
+                  Acompanhamento próximo, com plano terapêutico ajustado à sua
                   realidade
                 </h3>
               </div>
             </div>
 
             {/* Card Central - Spans 2 rows in the middle */}
-            <div className="row-span-2 bg-vitoria-yellow rounded-[70px] py-14 shadow-xl p-8 flex flex-col items-center justify-between text-white">
+            <div className="row-span-2 bg-vitoria-yellow lg:rounded-[70px] rounded-[45px] py-14 shadow-xl p-8 flex flex-col items-center justify-between text-white">
               <div className="text-center">
                 <p className="text-2xl text-vitoria-brown text-center font-medium mb-4">
                   Pronto(a) para dar o primeiro passo?
@@ -104,7 +104,7 @@ function Benefits() {
               <div className="my-8 ">
                 <button
                   type="button"
-                  className="bg-vitoria-text text-lg text-vitoria-brown px-12 py-3 rounded-3xl border border-vitoria-brown hover:bg-gray-100 transition-colors duration-300 shadow-lg"
+                  className="bg-vitoria-text text-lg text-vitoria-brown px-12 py-3 rounded-3xl border border-vitoria-brown hover:bg-vitoria-brown hover:text-vitoria-text transition-colors duration-300 shadow-lg"
                 >
                   Quero agendar minha consulta
                 </button>
@@ -118,40 +118,38 @@ function Benefits() {
             </div>
 
             {/* Card C - Top Right */}
-            <div className="relative bg-transparent rounded-[70px] shadow-lg border border-vitoria-text flex items-center justify-center group hover:shadow-xl transition-shadow duration-300 p-12 lg:p-0">
-              <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-vitoria-text rounded-full p-2 shadow-lg">
-                <Brain className="w-12 h-12 text-black" strokeWidth={1} />
+            <div className="relative bg-transparent lg:rounded-[70px] rounded-[45px] shadow-lg border border-vitoria-text flex items-center justify-center group hover:shadow-xl transition-shadow duration-300 p-12 lg:p-0">
+              <div className="absolute lg:-left-8 -left-6 top-1/2 transform -translate-y-1/2 bg-vitoria-text rounded-full p-2 shadow-lg">
+                <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
                 <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
-                  Acompanhamento próximo, com plano terapeutico ajustado a sua
-                  realidade
+                  Foco em redução do sofrimento psíquico e fortalecimento
+                  emocional
                 </h3>
               </div>
             </div>
 
             {/* Card B - Bottom Left */}
-            <div className="relative bg-transparent rounded-[70px] shadow-lg border border-vitoria-text flex items-center justify-center group hover:shadow-xl transition-shadow duration-300 p-12 lg:p-0">
-              <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-vitoria-text rounded-full p-2 shadow-lg">
-                <Brain className="w-12 h-12 text-black" strokeWidth={1} />
+            <div className="relative bg-transparent lg:rounded-[70px] rounded-[45px] shadow-lg border border-vitoria-text flex items-center justify-center group hover:shadow-xl transition-shadow duration-300 p-12 lg:p-0">
+              <div className="absolute lg:-left-8 -left-6 top-1/2 transform -translate-y-1/2 bg-vitoria-text rounded-full p-2 shadow-lg">
+                <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
                 <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
-                  Acompanhamento próximo, com plano terapeutico ajustado a sua
-                  realidade
+                  Tratamentos baseados em evidências científicas
                 </h3>
               </div>
             </div>
 
             {/* Card D - Bottom Right */}
-            <div className="relative bg-transparent rounded-[70px] shadow-lg border border-vitoria-text flex items-center justify-center group hover:shadow-xl transition-shadow duration-300 p-12 lg:p-0">
-              <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-vitoria-yellow rounded-full p-2 shadow-lg">
-                <Brain className="w-12 h-12 text-white" strokeWidth={1} />
+            <div className="relative bg-transparent lg:rounded-[70px] rounded-[45px] shadow-lg border border-vitoria-text flex items-center justify-center group hover:shadow-xl transition-shadow duration-300 p-12 lg:p-0">
+              <div className="absolute lg:-left-8 -left-6 top-1/2 transform -translate-y-1/2 bg-vitoria-yellow rounded-full p-2 shadow-lg">
+                <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
                 <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
-                  Acompanhamento próximo, com plano terapeutico ajustado a sua
-                  realidade
+                  Escuta qualificada e sem julgamentos
                 </h3>
               </div>
             </div>

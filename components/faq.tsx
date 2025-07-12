@@ -1,29 +1,30 @@
-import { Drone } from 'lucide-react'
 import {
   Accordion,
   AccordionItem,
   AccordionContent,
   AccordionTrigger,
 } from './ui/accordion'
+import Borboleta from './svgs/custom-svgs/borboleta'
 
 export default function FAQ() {
   return (
     <div
       id="faq"
-      className="h-screen bg-vitoria-beige flex flex-col items-center gap-12"
+      className="h-svh bg-vitoria-beige flex flex-col items-center justify-center gap-12"
     >
-      <h3 className="lg:text-5xl text-3xl text-vitoria-text lg:mt-40 mt-20 text-center lg:text-left">
+      <h3 className="lg:text-4xl text-3xl text-vitoria-text mt-20 text-center lg:text-left">
         {' '}
         Perguntas Frequentes
       </h3>
 
-      <div className="w-full max-w-4xl mx-auto p-4">
+      <div className="w-full max-w-4xl mx-auto p-4 lg:mt-12">
         <Accordion type="single" collapsible defaultValue="item-1">
           <AccordionItem value="item-1" className="border-none mb-4">
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-6 px-8 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
-                  <Drone size={24} strokeWidth={1} />
+                  {/* <Drone size={24} strokeWidth={1} /> */}
+                  <Borboleta className="lg:h-10 lg:w-10 w-8 h-8 text-vitoria-text" />
                 </div>
                 <span className="flex-1 text-left">
                   Como funciona a consulta online?
@@ -32,14 +33,11 @@ export default function FAQ() {
               <AccordionContent className="px-8 pb-6 pt-0">
                 <div className="flex flex-col gap-4 text-vitoria-brown text-lg ">
                   <p>
-                    Nossa consulta online combina tecnologia de ponta com
-                    atendimento personalizado. Construída com materiais premium,
-                    oferece desempenho e confiabilidade incomparáveis.
-                  </p>
-                  <p>
-                    Os principais recursos incluem capacidades avançadas de
-                    processamento e uma interface de usuário intuitiva projetada
-                    tanto para iniciantes quanto para especialistas.
+                    Busca ajuda profissional para entender o que está sentindo,
+                    já percebe que os sintomas estão impactando sua rotina,
+                    trabalho ou relacionamentos, prefere ou precisa de um
+                    atendimento à distância e deseja um acompanhamento ético,
+                    responsável e verdadeiramente humanizado
                   </p>
                 </div>
               </AccordionContent>
@@ -50,7 +48,7 @@ export default function FAQ() {
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-6 px-8 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
-                  <Drone size={24} strokeWidth={1} />
+                  <Borboleta className="lg:h-10 lg:w-10 w-8 h-8 text-vitoria-text" />
                 </div>
                 <span className="flex-1 text-left">
                   Quanto tempo demora o atendimento?
@@ -78,7 +76,7 @@ export default function FAQ() {
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-6 px-8 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
-                  <Drone size={24} strokeWidth={1} />
+                  <Borboleta className="lg:h-10 lg:w-10 w-8 h-8 text-vitoria-text" />
                 </div>
                 <span className="flex-1 text-left">
                   Posso cancelar a consulta?

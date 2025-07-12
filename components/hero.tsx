@@ -33,7 +33,7 @@ function MainHero() {
           </div>
 
           {/* Div amarela - apenas desktop */}
-          <div className="rounded-3xl px-14 py-8 bg-vitoria-yellow w-2/3 text-2xl hidden lg:block">
+          <div className="rounded-3xl px-12 py-8 bg-vitoria-yellow w-2/3 text-xl hidden lg:block">
             <p className="font-light text-white/75 w-[85%]">
               Atendimento individualizado com a Dra. Vitória Marinho, psiquiatra
               que une{' '}
@@ -99,7 +99,7 @@ function SubHero() {
           Sente que a ansiedade está dominando seus dias
         </CardTwo>
         <CardTwo
-          cardClassName="bg-vitoria-brown border-vitoria-yellow lg:bg-vitoria-text border"
+          cardClassName="bg-vitoria-brown border-vitoria-yellow lg:border-stone-500 lg:bg-vitoria-text border"
           textClassName="lg:text-vitoria-brown text-vitoria-text"
           icon={<Energia className="h-20 w-20" />}
         >
@@ -112,7 +112,7 @@ function SubHero() {
           Está sem energia e motivação por causa da depressão
         </CardTwo>
         <CardTwo
-          cardClassName="bg-vitoria-brown border-vitoria-yellow lg:bg-vitoria-text border"
+          cardClassName="bg-vitoria-brown border-vitoria-yellow lg:border-stone-500 lg:bg-vitoria-text border"
           textClassName="lg:text-vitoria-brown text-vitoria-text"
           icon={<Compulsao className="h-20 w-20" />}
         >
@@ -133,17 +133,14 @@ function SubHero() {
         </CardTwo>
       </div>
 
-      <div className="flex py-2 px-4 items-center justify-center text-xl border-[1px] border-vitoria-text gap-2 rounded-xl lg:mb-20">
-        <LaptopMinimalCheck
-          className="text-vitoria-text"
-          size={48}
-          strokeWidth={1}
-        />
-        <p className="text-vitoria-text ">
-          <span className="text-vitoria-brown font-bold pr-1.5">Quero</span>
-          consultar online
-        </p>
-      </div>
+      <button
+        type="button"
+        className="flex py-2 px-4 items-center justify-center text-xl border-[1px] border-vitoria-text gap-2 rounded-xl lg:mb-20 hover:bg-vitoria-text hover:text-vitoria-brown text-vitoria-text transition-colors duration-300"
+      >
+        <LaptopMinimalCheck size={48} strokeWidth={1} />
+        <span className="text-vitoria-brown font-bold">Quero</span>
+        consultar online
+      </button>
     </div>
   )
 }

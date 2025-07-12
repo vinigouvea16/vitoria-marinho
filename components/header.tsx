@@ -129,6 +129,7 @@ export default function Header() {
             src="/logo1.png"
             width={120}
             height={54}
+            unoptimized
             alt="logo da psiquiatra vitoria marinho"
             className="w-[120px] h-[54px] object-contain"
           />

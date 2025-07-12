@@ -4,17 +4,17 @@ import Instagram from './svgs/instagram'
 
 export default function Footer() {
   return (
-    <div className="w-full flex flex-col py-2 mb-8 lg:px-10 px-8 ">
-      <div className="flex flex-col lg:flex-row w-full justify-between space-y-4 lg:gap-0 border-vitoria-beige/75 border-t-1">
-        <div id="footers-right-side" className="flex items-center mt-4">
+    <div className="w-full flex flex-col py-2 lg:px-10 px-8 ">
+      <div className="flex flex-col lg:flex-row w-full lg:justify-between space-y-4 lg:gap-0 border-vitoria-beige/75 border-t-1 pt-4">
+        <div id="footers-right-side" className="flex items-center text-sm">
           {' '}
           <a href="#hero" className="hidden lg:block">
             <Image
               src="/logo1.png"
-              width={255}
-              height={77}
+              width={150}
+              height={58}
               alt={'logo da psiquiatra vitoria marinho'}
-              className="w-[255px] h-[77px] object-contain"
+              className="w-[150px] h-[58px] object-contain"
             />
           </a>
           <div className="text-vitoria-text flex flex-col lg:flex-row lg:gap-4 lg:p-4 gap-1">
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="text-vitoria-beige lg:text-lg text-xs font-bold flex items-center gap-2">
+        <div className="text-vitoria-beige lg:text-sm text-xs font-bold flex items-center gap-2">
           <a href="_blank" className="text-vitoria-text  ">
             politica de privicidade
           </a>
@@ -46,9 +46,9 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex gap-2 items-center text-vitoria-text mx-auto lg:mx-0">
-          <WhatsApp className="size-7 " />
-          <Instagram className="size-7" />
+        <div className="flex gap-2 items-center text-vitoria-text mx-auto lg:mx-0 h-[66px]">
+          <WhatsApp className="size-6 " />
+          <Instagram className="size-6" />
         </div>
       </div>
     </div>

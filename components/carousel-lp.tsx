@@ -31,6 +31,16 @@ const testimonials: Testimonial[] = [
       'Me senti acolhido desde a primeira consulta. A Dra. Vitória é extremamente empática, atenciosa e cuidadosa na condução do meu tratamento.',
     nomePaciente: 'Carlos Henrique',
   },
+  {
+    depoimento:
+      'As crises de ansiedade diminuíram bastante. Aprendi a identificar os gatilhos e a desenvolver estratégias para controlá-las. Minha qualidade de vida melhorou muito.',
+    nomePaciente: 'Isabela Santos',
+  },
+  {
+    depoimento:
+      'Eu vivia em um ciclo de autossabotagem e falta de motivação. Com o acompanhamento da Dra. Vitória, estou redescobrindo meu propósito e a energia para perseguir meus sonhos.',
+    nomePaciente: 'Lucas Oliveira',
+  },
   // Adicione mais depoimentos aqui conforme necessário
 ]
 
@@ -39,6 +49,7 @@ export function CarouselSocialProof() {
     <Carousel
       opts={{
         align: 'start',
+        loop: true,
       }}
       className="w-full max-w-sm md:max-w-4xl mx-auto"
     >
