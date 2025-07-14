@@ -1,11 +1,14 @@
 import Image from 'next/image'
 import Borboleta from './svgs/custom-svgs/borboleta'
+import AnimatedSection from './animated-section'
 
 export default function About() {
   return (
     <div className="h-full">
       <AboutIntro />
-      <Benefits />
+      <AnimatedSection>
+        <Benefits />
+      </AnimatedSection>
     </div>
   )
 }
@@ -102,12 +105,14 @@ function Benefits() {
               </div>
 
               <div className="my-8 ">
-                <button
-                  type="button"
-                  className="bg-vitoria-text text-lg text-vitoria-brown px-12 py-3 rounded-3xl border border-vitoria-brown hover:bg-vitoria-brown hover:text-vitoria-text transition-colors duration-300 shadow-lg"
+                <a
+                  target="_blank"
+                  href="https://wa.me/5584996800712"
+                  rel="noreferrer"
+                  className="bg-vitoria-text text-lg flex text-center text-vitoria-brown px-12 py-3 rounded-3xl border border-vitoria-brown hover:bg-vitoria-brown hover:text-vitoria-text transition-colors duration-300 shadow-lg"
                 >
                   Quero agendar minha consulta
-                </button>
+                </a>
               </div>
 
               <div className="text-center">

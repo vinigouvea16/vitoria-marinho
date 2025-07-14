@@ -10,7 +10,7 @@ export default function Contact() {
     >
       <div className="flex flex-col h-[50vh] items-center justify-evenly lg:my-auto lg:w-2/3 text-center">
         <h3 className="text-vitoria-text lg:text-4xl text-2xl font-light w-4/5">
-          O <b>maior alívio</b> vem quando paramo de tentar dar conta sozinhos.
+          O <b>maior alívio</b> vem quando paramos de tentar dar conta sozinhos.
         </h3>
 
         <div className="flex flex-col-reverse lg:flex-row justify-around items-center gap-8 lg:space-y-0">

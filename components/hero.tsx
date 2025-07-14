@@ -6,12 +6,15 @@ import Pensamentos from './svgs/custom-svgs/pensamentos'
 import Compulsao from './svgs/custom-svgs/compulsao'
 import Dormir from './svgs/custom-svgs/dormir'
 import EspacoSeguro from './svgs/custom-svgs/espaco-seguro'
+import AnimatedSection from './animated-section'
 
 export default function Hero() {
   return (
     <div className="">
       <MainHero />
-      <SubHero />
+      <AnimatedSection>
+        <SubHero />
+      </AnimatedSection>
     </div>
   )
 }
@@ -133,14 +136,16 @@ function SubHero() {
         </CardTwo>
       </div>
 
-      <button
-        type="button"
+      <a
+        target="_blank"
+        href="https://wa.me/5584996800712"
+        rel="noreferrer"
         className="flex py-2 px-4 items-center justify-center text-xl border-[1px] border-vitoria-text gap-2 rounded-xl lg:mb-20 hover:bg-vitoria-text hover:text-vitoria-brown text-vitoria-text transition-colors duration-300"
       >
         <LaptopMinimalCheck size={48} strokeWidth={1} />
         <span className="text-vitoria-brown font-bold">Quero</span>
         consultar online
-      </button>
+      </a>
     </div>
   )
 }

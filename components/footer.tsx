@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import WhatsApp from './svgs/whatsapp'
 import Instagram from './svgs/instagram'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -37,9 +38,9 @@ export default function Footer() {
         </div>
 
         <div className="text-vitoria-beige lg:text-sm text-xs font-bold flex items-center gap-2">
-          <a href="_blank" className="text-vitoria-text  ">
+          <Link href="/politica-privacidade" className="text-vitoria-text  ">
             politica de privacidade
-          </a>
+          </Link>
           <div className="w-[1px] bg-vitoria-text" />
           <p className="">
             feito com carinho por <span className="italic">estúdio vier</span>
@@ -47,7 +48,9 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-2 items-center text-vitoria-text mx-auto lg:mx-0 h-[66px]">
-          <WhatsApp className="size-6 " />
+          <a href="https://wa.me/5584996800712">
+            <WhatsApp className="size-6 " />
+          </a>
           <Instagram className="size-6" />
         </div>
       </div>

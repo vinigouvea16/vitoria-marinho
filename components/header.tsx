@@ -63,11 +63,11 @@ export default function Header() {
             className="w-[255px] h-[77px] object-contain"
           />
         </a>
-        <div className="text-vitoria-text justify-between flex gap-4 p-4">
+        <div className="text-vitoria-text font-thin justify-between flex gap-4 p-4">
           <button
             type="button"
             onClick={() => handleNavClick('#about')}
-            className="hover:text-white hover:underline underline-offset-4"
+            className="hover:text-vitoria-yellow hover:underline underline-offset-4"
           >
             sobre
           </button>
@@ -75,7 +75,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => handleNavClick('#feedbacks')}
-            className="hover:text-white hover:underline underline-offset-4"
+            className="hover:text-vitoria-yellow hover:underline underline-offset-4"
           >
             feedbacks
           </button>
@@ -83,18 +83,19 @@ export default function Header() {
           <button
             type="button"
             onClick={() => handleNavClick('#faq')}
-            className="hover:text-white hover:underline underline-offset-4"
+            className="hover:text-vitoria-yellow hover:underline underline-offset-4"
           >
             faq
           </button>
           <div className="w-[1px] bg-vitoria-text" />
-          <button
-            type="button"
-            onClick={() => handleNavClick('#contato')}
-            className="hover:text-white hover:underline underline-offset-4"
+          <a
+            target="_blank"
+            href="https://wa.me/5584996800712"
+            rel="noreferrer"
+            className="hover:text-vitoria-yellow hover:underline underline-offset-4"
           >
             contato
-          </button>
+          </a>
         </div>
       </div>
 
