@@ -125,7 +125,7 @@ export default function Header() {
           isVisible ? 'translate-y-0' : '-translate-y-22'
         }`}
       >
-        <a href="#hero">
+        {/* <a href="#hero">
           <Image
             src="/logo1.png"
             width={120}
@@ -134,13 +134,23 @@ export default function Header() {
             alt="logo da psiquiatra vitoria marinho"
             className="w-[120px] h-[54px]  object-contain"
           />
-        </a>
+        </a> */}
       </div>
 
       {/* Menu Mobile Overlay */}
       {isMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm">
           <div className="absolute top-24 left-4 right-4 bg-vitoria-brown/95 rounded-3xl p-8 shadow-2xl">
+            <a href="#hero">
+              <Image
+                src="/logo1.png"
+                width={120}
+                height={54}
+                unoptimized
+                alt="logo da psiquiatra vitoria marinho"
+                className="w-[120px] h-[54px] mx-auto object-contain"
+              />
+            </a>
             <nav className="flex flex-col space-y-6">
               <button
                 type="button"

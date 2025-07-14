@@ -6,9 +6,9 @@ export default function Contact() {
   return (
     <div
       id="contato"
-      className="lg:h-screen z-10 bg-vitoria-brown flex flex-col lg:justify-between justify-center items-center"
+      className="h-screen z-10 bg-vitoria-brown flex flex-col justify-evenly items-center"
     >
-      <div className="flex flex-col h-[50vh] items-center justify-evenly lg:my-auto lg:w-2/3 text-center">
+      <div className="flex flex-col h-[50vh] items-center justify-around lg:my-auto lg:w-2/3 text-center">
         <h1 className="text-vitoria-text lg:text-4xl text-2xl font-light w-4/5">
           O <b>maior alívio</b> vem quando paramos de tentar dar conta sozinhos.
         </h1>
