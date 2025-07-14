@@ -30,7 +30,7 @@ function MainHero() {
           <div className="flex flex-col justify-center mt-24 lg:w-2/3 space-y-2">
             <p className="lg:text-4xl text-2xl lg:text-left text-center ">
               Reconquiste seu{' '}
-              <span className="italic font-bold">equilibrio emocional</span> com
+              <span className="italic font-bold">equilíbrio emocional</span> com
               cuidado, e acolhimento
             </p>
             <p className="font-light text-sm text-center lg:text-left pt-1 lg:pt-0 w-full">
