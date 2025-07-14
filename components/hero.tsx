@@ -56,6 +56,8 @@ function MainHero() {
             src="/vitoria-fundo.png"
             width={400}
             height={800}
+            priority
+            unoptimized
             alt="Imagem da Dra. Vitória"
             className="lg:object-contain mt-40 lg:mt-0 object-cover z-10 lg:h-full lg:w-auto w-[400px] h-[800px] "
           />
