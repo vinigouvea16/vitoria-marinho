@@ -27,13 +27,13 @@ function MainHero() {
         className="lg:h-screen h-[80vh] relative overflow-hidden lg:grid lg:grid-cols-2 bg-vitoria-brown text-vitoria-text"
       >
         <div className="m-auto flex flex-col items-center lg:gap-20 gap-10 relative z-10">
-          <div className="flex flex-col justify-center mt-24 w-2/3">
+          <div className="flex flex-col justify-center mt-24 lg:w-2/3 space-y-2">
             <p className="lg:text-4xl text-2xl lg:text-left text-center ">
               Reconquiste seu{' '}
               <span className="italic font-bold">equilibrio emocional</span> com
               cuidado, e acolhimento
             </p>
-            <p className="font-light lg:text-right text-center pt-1 lg:pt-0 w-full pr-20">
+            <p className="font-light text-sm text-center lg:text-left pt-1 lg:pt-0 w-full">
               CRM/RN 12963 | CRM/PR 56010
             </p>
           </div>
