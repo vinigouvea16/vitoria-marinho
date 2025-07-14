@@ -131,7 +131,7 @@ export default function Header() {
             height={54}
             unoptimized
             alt="logo da psiquiatra vitoria marinho"
-            className="w-[120px] h-[54px] object-contain"
+            className="w-[120px] h-[54px]  object-contain"
           />
         </a>
       </div>
