@@ -38,7 +38,7 @@ export default function Footer() {
 
         <div className="text-vitoria-beige lg:text-sm text-xs font-bold flex items-center gap-2">
           <a href="_blank" className="text-vitoria-text  ">
-            politica de privicidade
+            politica de privacidade
           </a>
           <div className="w-[1px] bg-vitoria-text" />
           <p className="">
