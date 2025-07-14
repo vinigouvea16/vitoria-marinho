@@ -51,7 +51,9 @@ export default function Footer() {
           <a href="https://wa.me/5584996800712">
             <WhatsApp className="size-6 " />
           </a>
-          <Instagram className="size-6" />
+          <a href="https://www.instagram.com/vitoriamarinho">
+            <Instagram className="size-6" />
+          </a>
         </div>
       </div>
     </div>
