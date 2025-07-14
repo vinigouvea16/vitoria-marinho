@@ -128,10 +128,10 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
+                <h4 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
                   Foco em redução do sofrimento psíquico e fortalecimento
                   emocional
-                </h3>
+                </h4>
               </div>
             </div>
 
@@ -141,9 +141,9 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
+                <h5 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
                   Tratamentos baseados em evidências científicas
-                </h3>
+                </h5>
               </div>
             </div>
 
@@ -153,9 +153,9 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
+                <h6 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
                   Escuta qualificada e sem julgamentos
-                </h3>
+                </h6>
               </div>
             </div>
           </div>

@@ -27,17 +27,20 @@ function MainHero() {
         className="lg:h-screen h-[80vh] relative overflow-hidden lg:grid lg:grid-cols-2 bg-vitoria-brown text-vitoria-text"
       >
         <div className="m-auto flex flex-col items-center lg:gap-20 gap-10 relative z-10">
-          <div className="flex justify-center align-middle mt-24">
-            <p className="lg:text-4xl lg:w-2/3 text-2xl w-2/3 lg:text-left text-center">
+          <div className="flex flex-col justify-center mt-24 max-w-[500px]">
+            <p className="lg:text-4xl text-2xl lg:text-left text-center">
               Reconquiste seu{' '}
-              <span className="italic font-bold">equilibro emocional</span> com
-              cuidado, e acolhimento
+              <span className="italic font-bold">equilibrio emocional</span>
+              com cuidado, e acolhimento
+            </p>
+            <p className="font-light lg:text-right text-center pt-1 lg:pt-0 w-full">
+              CRM/RN 12963 | CRM/PR 56010
             </p>
           </div>
 
           {/* Div amarela - apenas desktop */}
           <div className="rounded-3xl px-12 py-8 bg-vitoria-yellow w-2/3 text-xl hidden lg:block">
-            <p className="font-light text-white/75 w-[85%]">
+            <p className="font-light text-white/90 w-[85%]">
               Atendimento individualizado com a Dra. Vitória Marinho, psiquiatra
               que une{' '}
               <span className="text-vitoria-brown font-semibold">
@@ -51,9 +54,8 @@ function MainHero() {
         <div className="absolute inset-0 lg:left-10 lg:-bottom-110 flex lg:justify-centers justify-center">
           <Image
             src="/vitoria-fundo.png"
-            width={800}
-            height={1200}
-            unoptimized
+            width={400}
+            height={800}
             alt="Imagem da Dra. Vitória"
             className="lg:object-contain mt-40 lg:mt-0 object-cover z-10 lg:h-full lg:w-auto w-[400px] h-[800px] "
           />
@@ -62,9 +64,9 @@ function MainHero() {
         <div className="hidden lg:block">
           <Image
             src="/background.png"
-            width={1080}
-            height={1920}
-            unoptimized
+            width={1000}
+            height={1080}
+            priority
             alt={'logo da psiquiatra vitoria marinho'}
             className="h-screen object-cover"
           />

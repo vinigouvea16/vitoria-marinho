@@ -31,7 +31,12 @@ export default function Footer() {
               faq
             </a>{' '}
             <div className="w-[1px] bg-vitoria-text" />
-            <a className="hover:font-bold " href="_blank">
+            <a
+              className="hover:font-bold "
+              target="_blank"
+              href="https://wa.me/5584996800712"
+              rel="noreferrer"
+            >
               contato
             </a>{' '}
           </div>
@@ -43,7 +48,15 @@ export default function Footer() {
           </Link>
           <div className="w-[1px] bg-vitoria-text" />
           <p className="">
-            feito com carinho por <span className="italic">estúdio vier</span>
+            feito com carinho por{' '}
+            <a
+              href="https://www.estudiovier.com.br"
+              target="_blank"
+              rel="noreferrer"
+              className="italic"
+            >
+              estúdio vier
+            </a>
           </p>
         </div>
 

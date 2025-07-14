@@ -61,7 +61,7 @@ export function CarouselSocialProof() {
             className="pl-4 md:pl-4 basis-full md:basis-1/2"
           >
             <div className="p-1">
-              <Card className="bg-vitoria-text h-auto md:h-fit rounded-[40px] max-w-[340px] lg:max-w-none mx-auto">
+              <Card className="bg-vitoria-text h-auto md:h-fit rounded-[40px] max-w-[340px] lg:max-w-none mx-auto border-vitoria-brown">
                 <CardContent className="flex flex-col items-center justify-between p-6 md:py-10 md:px-10 min-h-[400px] md:min-h-[450px]">
                   <div className="text-vitoria-brown text-lg font-light">
                     <p className="text-center md:text-left">

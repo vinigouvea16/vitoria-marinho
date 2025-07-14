@@ -11,9 +11,7 @@ export default function Home() {
     <div className="font-meriweather bg-vitoria-text">
       <Header />
 
-      <AnimatedSection>
-        <Hero />
-      </AnimatedSection>
+      <Hero />
 
       <AnimatedSection>
         <About />

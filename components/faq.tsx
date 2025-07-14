@@ -12,10 +12,10 @@ export default function FAQ() {
       id="faq"
       className=" bg-vitoria-beige flex flex-col items-center justify-center gap-12 py-20"
     >
-      <h3 className="lg:text-4xl text-3xl text-vitoria-text text-center lg:text-left">
+      <h1 className="lg:text-4xl text-3xl text-vitoria-text text-center lg:text-left">
         {' '}
         Perguntas Frequentes
-      </h3>
+      </h1>
 
       <div className="w-full max-w-4xl mx-auto p-4">
         <Accordion type="single" collapsible defaultValue="">

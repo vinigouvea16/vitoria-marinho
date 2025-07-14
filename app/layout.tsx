@@ -22,7 +22,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Vitória Marinho | Psiquiatria',
-  description: 'Landing Page Vitória Marinho',
+  description:
+    'Vitoria Marinho | Psiquiatria | CRM/RN 12963 | CRM/PR 56010 | Reconquiste seu equilibro emocional com cuidado, e acolhimento',
 }
 
 export default function RootLayout({
