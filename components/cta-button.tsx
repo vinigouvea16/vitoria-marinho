@@ -29,7 +29,7 @@ export function CTAButton({ className = '', ...props }) {
         />
         <p className="text-vitoria-text">
           <span className="text-vitoria-beige font-bold pr-1.5">Quero</span>
-          consultar online
+          agendar minha consulta
         </p>
       </a>
     </div>

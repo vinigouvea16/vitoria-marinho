@@ -20,25 +20,24 @@ function AboutIntro() {
       className="lg:h-screen h-[80vh] relative overflow-hidden bg-vitoria-text flex overflow-x-hidden text-vitoria-brown"
     >
       <div className="lg:my-auto lg:ml-40 mx-auto flex flex-col space-y-14 lg:w-[38%] w-[80%]">
-        <h1 className="lg:text-4xl text-2xl mt-32 lg:mt-0 text-center lg:text-left mb-20">
+        <h1 className="lg:text-4xl text-2xl mt-20 lg:mt-0 text-center lg:text-left mb-20">
           <b className="italic">Quem</b> vai te acompanhar nessa jornada?
         </h1>
         <div className="space-y-4 hidden lg:block text-base/9 w-[90%]">
           <p className="">
-            Sou a Dra. Vitória Marinho, médica psiquiatra, formada pela
-            Universidade Potiguar e residente em psiquiatria pelo HC-UFPR. Meu
-            maior propósito é oferecer um{' '}
+            Meu nome é Vitória Marinho. Sou médica formada pela Universidade
+            Potiguar, residente na área da psiquiatria pelo Hospital de Clínicas
+            da UFPR.{' '}
             <b>
-              espaço de escuta empática, onde você se sinta acolhido(a) e
-              compreendido(a).
+              Trabalho diariamente ouvindo histórias e ajudando pessoas a
+              reconstruírem sua relação com a própria mente.
             </b>{' '}
           </p>
           <p className="">
-            Acredito que cada pessoa carrega uma história única. Por isso, meu
-            atendimento une conhecimento técnico, evidências científicas e
-            escuta humanizada, para construir um plano de cuidado
-            individualizado que te ajude a resgatar a autonomia, o sentido de
-            viver e o bem-estar emocional.
+            Minha atuação une ciência e acolhimento. Ofereço um espaço seguro e
+            ético, onde você pode falar sem medo ou julgamentos. Meu objetivo é
+            te ajudar a encontrar caminhos reais para reduzir o sofrimento e
+            resgatar sua qualidade de vida.
           </p>
         </div>
       </div>
@@ -66,20 +65,19 @@ function Benefits() {
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-4 block lg:hidden text-vitoria-text text-base/9 font-light tracking-wide my-10">
             <p className="">
-              Sou a Dra. Vitória Marinho, médica psiquiatra, formada pela
-              Universidade Potiguar e residente em psiquiatria pelo HC-UFPR. Meu
-              maior propósito é oferecer um{' '}
+              Meu nome é Vitória Marinho. Sou médica formada pela Universidade
+              Potiguar, residente na área da psiquiatria pelo Hospital de
+              Clínicas da UFPR.{' '}
               <b>
-                espaço de escuta empática, onde você se sinta acolhido(a) e
-                compreendido(a).
+                Trabalho diariamente ouvindo histórias e ajudando pessoas a
+                reconstruírem sua relação com a própria mente.
               </b>{' '}
             </p>
             <p className="">
-              Acredito que cada pessoa carrega uma história única. Por isso, meu
-              atendimento une conhecimento técnico, evidências científicas e
-              escuta humanizada, para construir um plano de cuidado
-              individualizado que te ajude a resgatar a autonomia, o sentido de
-              viver e o bem-estar emocional.
+              Minha atuação une ciência e acolhimento. Ofereço um espaço seguro
+              e ético, onde você pode falar sem medo ou julgamentos. Meu
+              objetivo é te ajudar a encontrar caminhos reais para reduzir o
+              sofrimento e resgatar sua qualidade de vida.
             </p>
           </div>
           <div className="lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-12 lg:h-[550px] flex flex-col-reverse gap-8 px-4">
@@ -89,7 +87,7 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
+                <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
                   Acompanhamento próximo, com plano terapêutico ajustado à sua
                   realidade
                 </h3>
@@ -128,7 +126,7 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h4 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
+                <h4 className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
                   Foco em redução do sofrimento psíquico e fortalecimento
                   emocional
                 </h4>
@@ -141,7 +139,7 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h5 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
+                <h5 className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
                   Tratamentos baseados em evidências científicas
                 </h5>
               </div>
@@ -153,7 +151,7 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h6 className="text-lg lg:w-2/3 mx-auto text-vitoria-text">
+                <h6 className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
                   Escuta qualificada e sem julgamentos
                 </h6>
               </div>

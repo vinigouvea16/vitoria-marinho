@@ -29,9 +29,8 @@ function MainHero() {
         <div className="m-auto flex flex-col items-center lg:gap-20 gap-10 relative z-10">
           <div className="flex flex-col justify-center mt-24 lg:w-2/3 space-y-2">
             <p className="lg:text-4xl text-2xl lg:text-left text-center ">
-              Reconquiste seu{' '}
-              <span className="italic font-bold">equilíbrio emocional</span> com
-              cuidado, e acolhimento
+              Cuidado emocional com leveza, acolhimento e{' '}
+              <span className="italic font-bold">respeito à sua história</span>.
             </p>
             <p className="font-light text-sm text-center lg:text-left pt-1 lg:pt-0 w-full">
               CRM/RN 12963 | CRM/PR 56010
@@ -41,12 +40,11 @@ function MainHero() {
           {/* Div amarela - apenas desktop */}
           <div className="rounded-3xl px-12 py-8 bg-vitoria-yellow w-2/3 text-xl hidden lg:block">
             <p className="font-light text-white/90 w-[85%]">
-              Atendimento individualizado com a Dra. Vitória Marinho, psiquiatra
-              que une{' '}
+              Sou a Dra. Vitória Marinho, médica atuante na área da psiquiatria,
+              e acredito que cuidar da saúde mental deve ser um {''}
               <span className="text-vitoria-brown font-semibold">
-                ciência, empatia respeito
-              </span>{' '}
-              à <b>sua historia</b>.
+                processo leve, ético e seguro.
+              </span>
             </p>
           </div>
         </div>
@@ -76,14 +74,13 @@ function MainHero() {
       </div>
 
       <div className="lg:hidden absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-30 w-[85%]">
-        <div className="rounded-3xl p-8 bg-vitoria-yellow text-xl">
+        <div className="rounded-3xl p-6 bg-vitoria-yellow text-xl">
           <p className="font-light text-white/65 text-center">
-            Atendimento individualizado com a Dra. Vitória Marinho, psiquiatra
-            que une{' '}
+            Sou a Dra. Vitória Marinho, médica atuante na área da psiquiatria, e
+            acredito que cuidar da saúde mental deve ser um {''}
             <span className="text-vitoria-brown font-semibold">
-              ciência, empatia respeito
-            </span>{' '}
-            à <b>sua historia</b>.
+              processo leve, ético e seguro.
+            </span>
           </p>
         </div>
       </div>
@@ -148,7 +145,7 @@ function SubHero() {
       >
         <LaptopMinimalCheck size={48} strokeWidth={1} />
         <span className="text-vitoria-brown font-bold">Quero</span>
-        consultar online
+        agendar minha consulta
       </a>
     </div>
   )

@@ -18,28 +18,33 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     depoimento:
-      'Comecei meu tratamento com a doutora Vitória em um momento muito difícil da minha vida, e desde então tenho sentido uma verdadeira evolução. Ela é uma profissional excepcional, com quem construí um vínculo de confiança e acolhimento.',
+      'A Dra Vitória Marinho sempre me atendeu com um carinho e empatia que poucas vezes tive em uma consulta, sua atenção e dedicação para com meu caso foi fundamental para minha evolução.',
+    nomePaciente: 'João Castilho',
+  },
+  {
+    depoimento:
+      'Comecei meu tratamento com a doutora Vitória em um momento muito difícil da minha vida, e desde então tenho sentido uma verdadeira evolução. Ela é uma profissional excepcional, com quem construí um vínculo de confiança e acolhimento. Sou profundamente grato pelo cuidado e pela forma como ela tem me ajudado nesse processo.',
     nomePaciente: 'Caio Rios',
   },
   {
     depoimento:
-      'Minhas consultas são online e a abordagem dela foi a que mais gostei. Ela ouve com cuidado e tem me ajudado muito junto à terapia. Explica tudo com clareza e se atualiza constantemente.',
+      'Minhas consultas são online e de todos os profissionais que já fui, a abordagem dela foi a que mais gostei. Ela ouve com cuidado as demandas e tem conseguido me ajudar junto ao meu tratamento de terapia. Vitória também é uma profissional que se atualiza, percebo isso quando ela fala e explica sobre uma série de coisas durante as consultas e isso é essencial!',
     nomePaciente: 'Jamilly França',
   },
   {
     depoimento:
-      'Me senti acolhido desde a primeira consulta. A Dra. Vitória é extremamente empática, atenciosa e cuidadosa na condução do meu tratamento.',
+      'Me senti acolhido desde a primeira consulta. A Dra. Vitória é extremamente empática, atenciosa e cuidadosa na condução do meu tratamento. Escuta com interesse e sempre faz ótimas explicações sobre o tratamento.',
     nomePaciente: 'Carlos Henrique',
   },
   {
     depoimento:
-      'As crises de ansiedade diminuíram bastante. Aprendi a identificar os gatilhos e a desenvolver estratégias para controlá-las. Minha qualidade de vida melhorou muito.',
-    nomePaciente: 'Isabela Santos',
+      'Atendimento acolhedor e profissional aberta à escuta e olhar sensível!',
+    nomePaciente: 'Simone Mumbach',
   },
   {
     depoimento:
-      'Eu vivia em um ciclo de autossabotagem e falta de motivação. Com o acompanhamento da Dra. Vitória, estou redescobrindo meu propósito e a energia para perseguir meus sonhos.',
-    nomePaciente: 'Lucas Oliveira',
+      'Eu posso dizer que a Dra. Vitória é uma médica muito comprometida com a saúde mental dos pacientes. Teve paciência e empatia para me ajudar ao longo de todo o tratamento, sou muito grata por tudo!',
+    nomePaciente: 'Bárbara Vieira',
   },
   // Adicione mais depoimentos aqui conforme necessário
 ]
@@ -63,15 +68,15 @@ export function CarouselSocialProof() {
             <div className="p-1">
               <Card className="bg-vitoria-text h-auto md:h-fit rounded-[40px] max-w-[340px] lg:max-w-none mx-auto border-vitoria-brown">
                 <CardContent className="flex flex-col items-center justify-between p-6 md:py-10 md:px-10 min-h-[400px] md:min-h-[450px]">
-                  <div className="text-vitoria-brown text-lg font-light">
-                    <p className="text-center md:text-left">
+                  <div className="text-vitoria-brown font-light">
+                    <p className="text-left w-11/12 mx-auto">
                       {testimonial.depoimento}
                     </p>
                   </div>
                   <div className="flex w-full">
                     <div className="flex flex-col w-full space-y-2 items-end">
                       <div className="w-4/5 h-[1px] bg-vitoria-brown" />
-                      <p className="text-2xl italic text-right font-light text-vitoria-brown">
+                      <p className="lg:text-2xl text-xl italic text-right font-light text-vitoria-brown">
                         {testimonial.nomePaciente}
                       </p>
                     </div>
