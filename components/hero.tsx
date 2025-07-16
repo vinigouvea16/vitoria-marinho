@@ -73,8 +73,8 @@ function MainHero() {
         </div>
       </div>
 
-      <div className="lg:hidden absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-30 w-[85%]">
-        <div className="rounded-3xl p-6 bg-vitoria-yellow text-xl">
+      <div className="lg:hidden absolute -bottom-24 left-1/2 transform -translate-x-1/2 z-30 w-[85%]">
+        <div className="rounded-3xl p-4 bg-vitoria-yellow text-lg">
           <p className="font-light text-white/65 text-center">
             Sou a Dra. Vitória Marinho, médica atuante na área da psiquiatria, e
             acredito que cuidar da saúde mental deve ser um {''}
@@ -93,7 +93,7 @@ function SubHero() {
     <div className="lg:h-screen py-30 lg:py-0 bg-vitoria-beige flex flex-col items-center justify-evenly lg:justify-evenly lg:pt-0">
       <h2 className="lg:text-5xl text-2xl text-center w-2/3 text-vitoria-text lg:mt-20">
         {' '}
-        Minha consulta é para você, que:
+        Minha consulta é para você que:
       </h2>
       <div className="lg:flex-row items-center align-middle gap-3 lg:h-[40vh] lg:mx-28 flex flex-col my-8 lg:my-0">
         <CardTwo
@@ -107,7 +107,7 @@ function SubHero() {
           textClassName="lg:text-vitoria-brown text-vitoria-text"
           icon={<Energia className="h-20 w-20" />}
         >
-          Tem vivido crises de pânico que paralisa sua rotina
+          Tem vivido crises de pânico que paralisam sua rotina
         </CardTwo>
         <CardTwo
           cardClassName="bg-vitoria-text border"
@@ -126,7 +126,7 @@ function SubHero() {
           cardClassName="bg-vitoria-text border"
           icon={<Dormir className="h-20 w-20" />}
         >
-          Não consegue dormir bem, mesmo exausto(a)
+          Tem dificuldades com o sono
         </CardTwo>
         <CardTwo
           icon={<EspacoSeguro className="h-20 w-20" />}
@@ -141,7 +141,7 @@ function SubHero() {
         target="_blank"
         href="https://wa.me/5584996800712"
         rel="noreferrer"
-        className="flex py-2 px-4 items-center justify-center text-xl border-[1px] border-vitoria-text gap-2 rounded-xl lg:mb-20 hover:bg-vitoria-text hover:text-vitoria-brown text-vitoria-text transition-colors duration-300"
+        className="flex py-2 px-2 lg:px-4 lg:py-2 items-center text-nowrap justify-center text-xl border-[1px] border-vitoria-text gap-2 rounded-xl lg:mb-20 hover:bg-vitoria-text hover:text-vitoria-brown text-vitoria-text transition-colors duration-300"
       >
         <LaptopMinimalCheck size={48} strokeWidth={1} />
         <span className="text-vitoria-brown font-bold">Quero</span>

@@ -28,7 +28,7 @@ export default function PoliticaPrivacidade() {
             <p className="text-stone-700 leading-relaxed">
               Esta Política de Privacidade descreve como as informações pessoais
               são coletadas, usadas e protegidas ao acessar e interagir com esta
-              página da Dr. Vitória Marinho.
+              página da Dra. Vitória Marinho.
             </p>
           </div>
 
@@ -70,7 +70,7 @@ export default function PoliticaPrivacidade() {
             <ul className="list-disc list-inside space-y-2 text-stone-700 mb-4 ml-4">
               <li>Entrar em contato para envio de informações solicitadas</li>
               <li>
-                Enviar comunicações sobre os serviços da Dr. Vitória Marinho
+                Enviar comunicações sobre os serviços da Dra. Vitória Marinho
               </li>
               <li>
                 Análises internas para melhoria do atendimento e da experiência

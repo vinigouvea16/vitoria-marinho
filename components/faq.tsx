@@ -26,24 +26,16 @@ export default function FAQ() {
                   <Borboleta className="lg:h-10 lg:w-10 w-8 h-8 text-vitoria-text" />
                 </div>
                 <span className="flex-1 text-left">
-                  Como funciona a consulta online?
+                  Como funciona uma consulta de psiquiatria online?
                 </span>
               </AccordionTrigger>
               <AccordionContent className="px-8 pb-6 pt-0">
                 <div className="flex flex-col gap-4 text-vitoria-brown text-lg ">
-                  <ul className="list-disc ml-4">
-                    <li>Realizada por vídeo através do Google Meet</li>
-                    <li>Duração média: 45 a 60 minutos</li>
-                    <li>
-                      Sigilo absoluto, de acordo com as normas do Conselho
-                      Federal de Medicina (CFM)
-                    </li>
-                    <li>
-                      Caso necessário, envio de receita digital válida em
-                      farmácias
-                    </li>
-                    <li>Pagamento antecipado por pix</li>
-                  </ul>
+                  <p>
+                    As consultas são realizadas por videoconferência através da
+                    plataforma meet, com duração semelhante à de uma consulta
+                    presencial (45-60min).
+                  </p>
                 </div>
               </AccordionContent>
             </div>
@@ -64,15 +56,15 @@ export default function FAQ() {
                   <ul className="list-disc ml-4">
                     <li>
                       Está buscando ajuda profissional para entender o que está
-                      sentindo
+                      sentindo;
                     </li>
                     <li>
                       Já percebe que os sintomas estão atrapalhando sua rotina,
-                      trabalho ou relacionamentos
+                      trabalho ou relacionamentos;
                     </li>
-                    <li>Prefere ou precisa de um atendimento à distância</li>
+                    <li>Prefere ou precisa de um atendimento à distância;</li>
                     <li>
-                      Busca um acompanhamento ético, responsável e humanizado
+                      Busca um acompanhamento ético, responsável e humanizado.
                     </li>
                   </ul>
                 </div>
@@ -87,28 +79,7 @@ export default function FAQ() {
                   <Borboleta className="lg:h-10 lg:w-10 w-8 h-8 text-vitoria-text" />
                 </div>
                 <span className="flex-1 text-left">
-                  Como funciona uma consulta de psiquiatria online?
-                </span>
-              </AccordionTrigger>
-              <AccordionContent className="px-8 pb-6 pt-0">
-                <div className="flex flex-col gap-4 text-vitoria-brown text-lg ">
-                  <p>
-                    As consultas são realizadas por videoconferência através da
-                    plataforma meet, com duração semelhante à de uma consulta
-                    presencial (45-60min).
-                  </p>
-                </div>
-              </AccordionContent>
-            </div>
-          </AccordionItem>
-          <AccordionItem value="item-4" className="border-none mb-4">
-            <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
-              <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-4 px-6 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
-                <div className="bg-vitoria-yellow p-3 rounded-full">
-                  <Borboleta className="lg:h-10 lg:w-10 w-8 h-8 text-vitoria-text" />
-                </div>
-                <span className="flex-1 text-left">
-                  É seguro e confiável fazer psiquiatria online?
+                  É seguro e confiável fazer acompanhamento online?
                 </span>
               </AccordionTrigger>
               <AccordionContent className="px-8 pb-6 pt-0">
@@ -121,7 +92,7 @@ export default function FAQ() {
               </AccordionContent>
             </div>
           </AccordionItem>
-          <AccordionItem value="item-5" className="border-none mb-4">
+          <AccordionItem value="item-4" className="border-none mb-4">
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-4 px-6 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
@@ -142,7 +113,7 @@ export default function FAQ() {
               </AccordionContent>
             </div>
           </AccordionItem>
-          <AccordionItem value="item-6" className="border-none mb-4">
+          <AccordionItem value="item-5" className="border-none mb-4">
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-4 px-6 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
@@ -163,7 +134,7 @@ export default function FAQ() {
               </AccordionContent>
             </div>
           </AccordionItem>
-          <AccordionItem value="item-7" className="border-none mb-4">
+          <AccordionItem value="item-6" className="border-none mb-4">
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-4 px-6 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
@@ -186,7 +157,7 @@ export default function FAQ() {
               </AccordionContent>
             </div>
           </AccordionItem>
-          <AccordionItem value="item-8" className="border-none mb-4">
+          <AccordionItem value="item-7" className="border-none mb-4">
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-4 px-6 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
@@ -206,7 +177,7 @@ export default function FAQ() {
               </AccordionContent>
             </div>
           </AccordionItem>
-          <AccordionItem value="item-9" className="border-none mb-4">
+          <AccordionItem value="item-8" className="border-none mb-4">
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-4 px-6 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
@@ -226,7 +197,7 @@ export default function FAQ() {
               </AccordionContent>
             </div>
           </AccordionItem>
-          <AccordionItem value="item-10" className="border-none mb-4">
+          <AccordionItem value="item-9" className="border-none mb-4">
             <div className="bg-vitoria-text border-[1px] border-vitoria-brown rounded-4xl overflow-hidden">
               <AccordionTrigger className="flex items-center gap-4 text-vitoria-brown text-xl py-4 px-6 hover:no-underline  [&[data-state=open]]:border-vitoria-brown">
                 <div className="bg-vitoria-yellow p-3 rounded-full">
