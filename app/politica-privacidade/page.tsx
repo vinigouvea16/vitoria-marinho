@@ -1,4 +1,14 @@
-import { Shield, Lock, Eye, Mail, FileText, Users, Cookie } from 'lucide-react'
+import {
+  Shield,
+  Lock,
+  Eye,
+  Mail,
+  FileText,
+  Users,
+  Cookie,
+  ArrowLeft,
+} from 'lucide-react'
+import Link from 'next/link'
 
 export default function PoliticaPrivacidade() {
   return (
@@ -6,6 +16,10 @@ export default function PoliticaPrivacidade() {
       {/* Header */}
       <header className="bg-transparent shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-6">
+          <Link href="/" className="py-2 flex gap-2">
+            <ArrowLeft strokeWidth={1.5} />
+            <p className="italic">Voltar</p>
+          </Link>
           <div className="flex items-center gap-3">
             <Shield className="h-8 w-8 text-vitoria-yellow" />
             <h1 className="text-2xl md:text-3xl font-bold ">
