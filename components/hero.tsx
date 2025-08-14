@@ -57,6 +57,7 @@ function MainHero() {
             width={400}
             height={800}
             priority
+            quality={100}
             alt="Imagem da Dra. Vitória"
             className="lg:object-contain mt-40 lg:mt-0 object-cover z-10 lg:h-full lg:w-auto w-[400px] h-[800px] "
           />
@@ -67,7 +68,6 @@ function MainHero() {
             src="/background.png"
             width={1000}
             height={1080}
-            priority
             alt={'logo da psiquiatra vitoria marinho'}
             className="h-screen object-cover"
           />
