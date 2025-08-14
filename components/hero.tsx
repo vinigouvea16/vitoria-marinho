@@ -1,3 +1,4 @@
+'use client'
 import { LaptopMinimalCheck } from 'lucide-react'
 import Image from 'next/image'
 import CrisesDePanico from './svgs/custom-svgs/crises-de-panico'
@@ -7,6 +8,7 @@ import Compulsao from './svgs/custom-svgs/compulsao'
 import Dormir from './svgs/custom-svgs/dormir'
 import EspacoSeguro from './svgs/custom-svgs/espaco-seguro'
 import AnimatedSection from './animated-section'
+import { usePixel } from '@/lib/usePixel'
 
 export default function Hero() {
   return (
@@ -55,7 +57,6 @@ function MainHero() {
             width={400}
             height={800}
             priority
-            unoptimized
             alt="Imagem da Dra. Vitória"
             className="lg:object-contain mt-40 lg:mt-0 object-cover z-10 lg:h-full lg:w-auto w-[400px] h-[800px] "
           />
@@ -89,6 +90,17 @@ function MainHero() {
 }
 
 function SubHero() {
+  const { trackCustom } = usePixel()
+
+  const handleClick = () => {
+    trackCustom('click_WhatsApp_inicio')
+    window.open(
+      'https://api.whatsapp.com/send?phone=558499487575&text=Oi,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20da%20Dr.%20Vit%C3%B3ria%20Marinho',
+      '_blank',
+      'noopener,noreferrer'
+    )
+  }
+
   return (
     <div className="lg:h-screen py-30 lg:py-0 bg-vitoria-beige flex flex-col items-center justify-evenly lg:justify-evenly lg:pt-0">
       <h2 className="lg:text-5xl text-2xl text-center w-2/3 text-vitoria-text lg:mt-20">
@@ -137,16 +149,15 @@ function SubHero() {
         </CardTwo>
       </div>
 
-      <a
-        target="_blank"
-        href="https://wa.me/5584996800712"
-        rel="noreferrer"
-        className="flex py-2 px-2 lg:px-4 lg:py-2 items-center text-nowrap justify-center text-xl border-[1px] border-vitoria-text gap-2 rounded-xl lg:mb-20 hover:bg-vitoria-text hover:text-vitoria-brown text-vitoria-text transition-colors duration-300"
+      <button
+        type="button"
+        onClick={handleClick}
+        className="flex py-2 px-2 lg:px-4 lg:py-2 items-center text-nowrap justify-center text-xl border-[1px] border-vitoria-text gap-2 rounded-xl lg:mb-20 hover:bg-vitoria-text hover:text-vitoria-brown text-vitoria-text transition-colors duration-300 cursor-pointer"
       >
         <LaptopMinimalCheck size={48} strokeWidth={1} />
         <span className="text-vitoria-brown font-bold">Quero</span>
         agendar minha consulta
-      </a>
+      </button>
     </div>
   )
 }

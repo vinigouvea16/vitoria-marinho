@@ -23,7 +23,6 @@ export default function PixelManager() {
     }
   }, [pathname])
 
-  // Função para disparar evento customizado Lead
   const trackLead = () => {
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Lead')

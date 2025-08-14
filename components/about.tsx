@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image'
 import Borboleta from './svgs/custom-svgs/borboleta'
 import AnimatedSection from './animated-section'
+import { usePixel } from '@/lib/usePixel'
 
 export default function About() {
   return (
@@ -56,6 +58,17 @@ function AboutIntro() {
 }
 
 function Benefits() {
+  const { trackCustom } = usePixel()
+
+  const handleClick = () => {
+    trackCustom('click_WhatsApp_meio')
+    window.open(
+      'https://api.whatsapp.com/send?phone=558499487575&text=Oi,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20da%20Dr.%20Vit%C3%B3ria%20Marinho',
+      '_blank',
+      'noopener,noreferrer'
+    )
+  }
+
   return (
     <div className="h-full lg:h-screen bg-vitoria-brown items-center justify-evenly flex flex-col">
       <h1 className="text-vitoria-text text-4xl lg:mt-20 hidden lg:block">
@@ -103,14 +116,13 @@ function Benefits() {
               </div>
 
               <div className="my-8 ">
-                <a
-                  target="_blank"
-                  href="https://wa.me/5584996800712"
-                  rel="noreferrer"
-                  className="bg-vitoria-text text-lg flex text-center text-vitoria-brown px-12 py-3 rounded-3xl border border-vitoria-brown hover:bg-vitoria-brown hover:text-vitoria-text transition-colors duration-300 shadow-lg"
+                <button
+                  type="button"
+                  onClick={handleClick}
+                  className="bg-vitoria-text text-lg flex text-center text-vitoria-brown px-12 py-3 rounded-3xl border border-vitoria-brown hover:bg-vitoria-brown hover:text-vitoria-text transition-colors duration-300 shadow-lg cursor-pointer"
                 >
                   Quero agendar minha consulta
-                </a>
+                </button>
               </div>
 
               <div className="text-center">

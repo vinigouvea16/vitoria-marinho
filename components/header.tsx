@@ -3,11 +3,13 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { usePixel } from '@/lib/usePixel'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const { trackCustom } = usePixel()
 
   useEffect(() => {
     const controlHeader = () => {
@@ -46,6 +48,24 @@ export default function Header() {
     closeMenu()
   }
 
+  const handleClick = () => {
+    trackCustom('click_WhatsApp_menu')
+    window.open(
+      'https://api.whatsapp.com/send?phone=558499487575&text=Oi,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20da%20Dr.%20Vit%C3%B3ria%20Marinho',
+      '_blank',
+      'noopener,noreferrer'
+    )
+  }
+
+  // const handleClickMobile = () => {
+  //   trackCustom('click_WhatsApp_menu_mobile')
+  //   window.open(
+  //     'https://api.whatsapp.com/send?phone=558499487575&text=Oi,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20da%20Dr.%20Vit%C3%B3ria%20Marinho',
+  //     '_blank',
+  //     'noopener,noreferrer'
+  //   )
+  // }
+
   return (
     <>
       {/* Header Desktop */}
@@ -67,7 +87,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => handleNavClick('#about')}
-            className="hover:text-vitoria-yellow hover:underline underline-offset-4"
+            className="hover:text-vitoria-yellow hover:underline underline-offset-4 cursor-pointer"
           >
             sobre
           </button>
@@ -75,7 +95,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => handleNavClick('#feedbacks')}
-            className="hover:text-vitoria-yellow hover:underline underline-offset-4"
+            className="hover:text-vitoria-yellow hover:underline underline-offset-4 cursor-pointer"
           >
             feedbacks
           </button>
@@ -83,19 +103,18 @@ export default function Header() {
           <button
             type="button"
             onClick={() => handleNavClick('#faq')}
-            className="hover:text-vitoria-yellow hover:underline underline-offset-4"
+            className="hover:text-vitoria-yellow hover:underline underline-offset-4 cursor-pointer"
           >
             faq
           </button>
           <div className="w-[1px] bg-vitoria-text" />
-          <a
-            target="_blank"
-            href="https://wa.me/5584996800712"
-            rel="noreferrer"
-            className="hover:text-vitoria-yellow hover:underline underline-offset-4"
+          <button
+            type="button"
+            onClick={handleClick}
+            className="hover:text-vitoria-yellow hover:underline underline-offset-4 cursor-pointer"
           >
             contato
-          </a>
+          </button>
         </div>
       </div>
 
@@ -175,7 +194,7 @@ export default function Header() {
               </button>
               <button
                 type="button"
-                onClick={() => handleNavClick('#contato')}
+                onClick={handleClick}
                 className="text-vitoria-text text-xl hover:text-white transition-colors text-left"
               >
                 contato
