@@ -4,6 +4,7 @@ import './globals.css'
 import { Merriweather } from 'next/font/google'
 import Script from 'next/script'
 import PixelManager from '@/components/pixel-manager'
+import PixelConsentBanner from '@/components/pixel-consent-banner'
 
 const merriweather = Merriweather({
   subsets: ['latin'],
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
+        <PixelConsentBanner />
         <PixelManager />
         {children}
       </body>
