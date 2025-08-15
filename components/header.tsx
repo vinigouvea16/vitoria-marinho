@@ -51,7 +51,7 @@ export default function Header() {
   const handleClick = () => {
     trackCustom('click_WhatsApp_menu')
     window.open(
-      'https://api.whatsapp.com/send?phone=558499487575&text=Oi,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20da%20Dr.%20Vit%C3%B3ria%20Marinho',
+      'https://api.whatsapp.com/send?phone=5584996800712&text=Oi,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20da%20Dr.%20Vit%C3%B3ria%20Marinho',
       '_blank',
       'noopener,noreferrer'
     )
