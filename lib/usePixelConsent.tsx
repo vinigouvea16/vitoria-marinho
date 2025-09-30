@@ -1,7 +1,23 @@
 'use client'
-import { useState, useEffect } from 'react'
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  type ReactNode,
+} from 'react'
 
-export function usePixelConsent() {
+interface PixelConsentContextType {
+  consent: boolean | null
+  accept: () => void
+  decline: () => void
+}
+
+const PixelConsentContext = createContext<PixelConsentContextType | undefined>(
+  undefined
+)
+
+export function PixelConsentProvider({ children }: { children: ReactNode }) {
   const [consent, setConsent] = useState<boolean | null>(null)
 
   useEffect(() => {
@@ -19,5 +35,17 @@ export function usePixelConsent() {
     setConsent(false)
   }
 
-  return { consent, accept, decline }
+  return (
+    <PixelConsentContext.Provider value={{ consent, accept, decline }}>
+      {children}
+    </PixelConsentContext.Provider>
+  )
+}
+
+export function usePixelConsent() {
+  const context = useContext(PixelConsentContext)
+  if (context === undefined) {
+    throw new Error('usePixelConsent must be used within PixelConsentProvider')
+  }
+  return context
 }

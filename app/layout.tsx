@@ -5,6 +5,7 @@ import { Merriweather } from 'next/font/google'
 import Script from 'next/script'
 import PixelManager from '@/components/pixel-manager'
 import PixelConsentBanner from '@/components/pixel-consent-banner'
+import { PixelConsentProvider } from '@/lib/usePixelConsent'
 
 const merriweather = Merriweather({
   subsets: ['latin'],
@@ -39,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      {/* Pixel */}
+      {/* Meta Pixel */}
       <Script id="fb-pixel" strategy="afterInteractive">
         {`
           !function(f,b,e,v,n,t,s)
@@ -72,9 +73,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
-        <PixelConsentBanner />
-        <PixelManager />
-        {children}
+        <PixelConsentProvider>
+          <PixelConsentBanner />
+          <PixelManager />
+          {children}
+        </PixelConsentProvider>
       </body>
     </html>
   )
