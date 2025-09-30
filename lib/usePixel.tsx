@@ -1,6 +1,6 @@
 'use client'
 import { usePathname } from 'next/navigation'
-import { usePixelConsent } from '@/lib/usePixelConsent'
+import { usePixelConsent } from './usePixelConsent'
 
 export function usePixel() {
   const pathname = usePathname()
