@@ -1,13 +1,5 @@
 'use client'
-declare global {
-  interface Window {
-    fbq?: (
-      event: string,
-      action?: string,
-      params?: Record<string, unknown>
-    ) => void
-  }
-}
+
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { usePixelConsent } from '@/lib/usePixelConsent'

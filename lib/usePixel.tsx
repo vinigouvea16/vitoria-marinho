@@ -24,5 +24,22 @@ export function usePixel() {
     }
   }
 
-  return { trackPageView, trackLead, trackCustom }
+  const trackGoogleAdsConversion = (conversionLabel?: string) => {
+    if (consent && typeof window.gtag === 'function') {
+      const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID
+
+      if (conversionLabel) {
+        window.gtag('event', 'conversion', {
+          send_to: `${googleAdsId}/${conversionLabel}`,
+        })
+      } else {
+        window.gtag('event', 'click', {
+          event_category: 'engagement',
+          event_label: 'outbound_click',
+        })
+      }
+    }
+  }
+
+  return { trackPageView, trackLead, trackCustom, trackGoogleAdsConversion }
 }
