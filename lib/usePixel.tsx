@@ -28,6 +28,8 @@ export function usePixel() {
     if (consent && typeof window.gtag === 'function') {
       const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID
 
+      console.log('🔥 Disparando Google Ads:', { googleAdsId, conversionLabel })
+
       if (conversionLabel) {
         window.gtag('event', 'conversion', {
           send_to: `${googleAdsId}/${conversionLabel}`,
