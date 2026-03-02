@@ -2,8 +2,6 @@
 import Image from 'next/image'
 import Borboleta from './svgs/custom-svgs/borboleta'
 import AnimatedSection from './animated-section'
-import { usePixel } from '@/lib/usePixel'
-
 export default function About() {
   return (
     <div className="h-full">
@@ -58,13 +56,7 @@ function AboutIntro() {
 }
 
 function Benefits() {
-  const { trackCustom, trackGoogleAdsConversion } = usePixel()
-
   const handleClick = () => {
-    trackCustom('click_WhatsApp_meio')
-
-    trackGoogleAdsConversion('TibaCKzMhfYaEIG46JNA')
-
     window.open(
       'https://api.whatsapp.com/send?phone=5584996800712&text=Oi,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20da%20Dr.%20Vit%C3%B3ria%20Marinho',
       '_blank',

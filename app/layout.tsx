@@ -3,9 +3,6 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Merriweather } from 'next/font/google'
 import Script from 'next/script'
-import PixelManager from '@/components/pixel-manager'
-import PixelConsentBanner from '@/components/pixel-consent-banner'
-import { PixelConsentProvider } from '@/lib/usePixelConsent'
 
 const merriweather = Merriweather({
   subsets: ['latin'],
@@ -30,8 +27,7 @@ export const metadata: Metadata = {
     'Vitoria Marinho | Psiquiatria | CRM/RN 12963 | CRM/PR 56010 | Reconquiste seu equilibro emocional com cuidado, e acolhimento',
 }
 
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID!
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID!
+const GOOGLE_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG!
 
 export default function RootLayout({
   children,
@@ -40,44 +36,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      {/* Meta Pixel */}
-      <Script id="fb-pixel" strategy="afterInteractive">
+      {/* Google Tag Manager */}
+      <Script id="gtm-script" strategy="afterInteractive">
         {`
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '${PIXEL_ID}');
-          fbq('track', 'PageView');
-        `}
-      </Script>
-
-      {/* Google Ads */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-ads" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GOOGLE_ADS_ID}');
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','${GOOGLE_TAG_ID}');
         `}
       </Script>
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
-        <PixelConsentProvider>
-          <PixelConsentBanner />
-          <PixelManager />
-          {children}
-        </PixelConsentProvider>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          {/* biome-ignore lint/a11y/useIframeTitle: <explanation> */}
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GOOGLE_TAG_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {children}
       </body>
     </html>
   )
