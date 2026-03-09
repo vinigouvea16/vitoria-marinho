@@ -5,11 +5,13 @@ import SocialProof from '@/components/social-proof'
 import Header from '@/components/header'
 import Contact from '@/components/contact'
 import AnimatedSection from '@/components/animated-section'
+import FixedCTAButton from '@/components/fixed-cta-button'
 
 export default function Home() {
   return (
     <div className="font-meriweather bg-vitoria-text">
       <Header />
+      <FixedCTAButton />
 
       <Hero />
 

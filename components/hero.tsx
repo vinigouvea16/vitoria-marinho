@@ -8,6 +8,8 @@ import Compulsao from './svgs/custom-svgs/compulsao'
 import Dormir from './svgs/custom-svgs/dormir'
 import EspacoSeguro from './svgs/custom-svgs/espaco-seguro'
 import AnimatedSection from './animated-section'
+import WhatsApp from './svgs/whatsapp'
+
 export default function Hero() {
   return (
     <div className="">
@@ -20,6 +22,14 @@ export default function Hero() {
 }
 
 function MainHero() {
+  const handleClick = () => {
+    window.open(
+      'https://api.whatsapp.com/send?phone=5584996800712&text=Oi,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20da%20Dr.%20Vit%C3%B3ria%20Marinho',
+      '_blank',
+      'noopener,noreferrer'
+    )
+  }
+
   return (
     <div className="relative">
       <div
@@ -47,6 +57,18 @@ function MainHero() {
               </span>
             </p>
           </div>
+
+          <div className="hidden lg:flex lg:w-2/3">
+            <button
+              type="button"
+              onClick={handleClick}
+              aria-label="Agendar consulta pelo WhatsApp"
+              className="flex items-center bg-vitoria-yellow p-4 rounded-3xl shadow-lg border border-white/30 hover:brightness-110 hover:cursor-pointer gap-4 text-white/80 z-50 w-fit"
+            >
+              <WhatsApp className="w-7 h-7" />
+              Agendar minha consulta
+            </button>
+          </div>
         </div>
 
         <div className="absolute inset-0 lg:left-10 lg:-bottom-110 flex lg:justify-centers justify-center">
@@ -72,7 +94,26 @@ function MainHero() {
         </div>
       </div>
 
-      <div className="lg:hidden absolute -bottom-24 left-1/2 transform -translate-x-1/2 z-30 w-[85%]">
+      <button
+        type="button"
+        onClick={handleClick}
+        aria-label="Agendar consulta pelo WhatsApp"
+        className="lg:hidden absolute flex items-center bg-vitoria-yellow p-4 rounded-3xl shadow-lg border border-white/30 hover:brightness-110 hover:cursor-pointer gap-4 text-white/80 left-1/2 transform -translate-x-1/2 w-fit truncate bottom-17 z-50"
+      >
+        <WhatsApp className="w-7 h-7" />
+        Agendar minha consulta
+      </button>
+
+      <div className="lg:hidden absolute -bottom-24 left-1/2 transform -translate-x-1/2 z-30 w-[85%] flex flex-col">
+        {/* <button
+          type="button"
+          onClick={handleClick}
+          aria-label="Agendar consulta pelo WhatsApp"
+          className="lg:hidden flex items-center bg-vitoria-yellow p-4 rounded-full shadow-lg border border-white/30 hover:brightness-110 hover:cursor-pointer gap-4 text-white/80 z-50 w-fit mx-auto"
+        >
+          <WhatsApp className="w-7 h-7" />
+          Agenda minha consulta
+        </button> */}
         <div className="rounded-3xl p-4 bg-vitoria-yellow text-lg">
           <p className="font-light text-white/65 text-center">
             Sou a Dra. Vitória Marinho, médica atuante na área da psiquiatria, e
@@ -102,7 +143,7 @@ function SubHero() {
         {' '}
         Minha consulta é para você que:
       </h2>
-      <div className="lg:flex-row items-center align-middle gap-3 lg:h-[40vh] lg:mx-28 flex flex-col my-8 lg:my-0">
+      <div className="lg:flex-row items-center align-middle gap-3 lg:h-[40vh] 2xl:mx-20 lg:mx-8 flex flex-col my-8 lg:my-0">
         <CardTwo
           cardClassName="bg-vitoria-text border"
           icon={<CrisesDePanico className="h-20 w-20" />}
@@ -174,7 +215,7 @@ function CardTwo({
 }: CardTwoProps) {
   return (
     <div
-      className={`2xl:rounded-[70px] xl:rounded-[50px] rounded-[40px] max-w-[300px] px-4 py-6 lg:px-0 lg:py-0 lg:max-w-none flex flex-col items-center justify-center space-y-4 border-[1px] border-[#707070] h-full ${
+      className={`2xl:rounded-[70px] xl:rounded-[50px] rounded-[40px] w-[300px] lg:w-auto px-4 py-6 lg:px-0 lg:py-0 lg:max-w-none flex flex-col items-center justify-center space-y-4 border-[1px] border-[#707070] h-full ${
         cardClassName || ''
       }`}
     >
