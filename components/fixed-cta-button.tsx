@@ -16,9 +16,12 @@ export default function FixedCTAButton() {
       type="button"
       onClick={handleClick}
       aria-label="Agendar consulta pelo WhatsApp"
-      className="md:hidden fixed bottom-12 right-8 z-50 flex items-center justify-center bg-[#25D366] p-4 rounded-full shadow-lg border border-white/30 hover:brightness-110 hover:cursor-pointer"
+      className="fixed bottom-12 right-8 2xl:left-39.5 lg:left-30 lg:bottom-20 w-fit z-50 lg:flex gap-4 items-center justify-center bg-[#25D366] lg:bg-vitoria-yellow p-4 rounded-full lg:rounded-3xl shadow-xl border border-white/30 hover:brightness-110 hover:cursor-pointer"
     >
       <WhatsApp className="w-7 h-7" />
+      <span className="hidden lg:flex text-white/80">
+        Quero agendar minha consulta
+      </span>
     </button>
   )
 }

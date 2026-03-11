@@ -58,7 +58,7 @@ function MainHero() {
             </p>
           </div>
 
-          <div className="hidden lg:flex lg:w-2/3">
+          {/* <div className="hidden lg:flex lg:w-2/3">
             <button
               type="button"
               onClick={handleClick}
@@ -68,7 +68,7 @@ function MainHero() {
               <WhatsApp className="w-7 h-7" />
               Quero agendar minha consulta
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="absolute inset-0 lg:left-10 lg:-bottom-110 flex lg:justify-centers justify-center">
