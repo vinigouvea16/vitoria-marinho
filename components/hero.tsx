@@ -66,7 +66,7 @@ function MainHero() {
               className="flex items-center bg-vitoria-yellow p-4 rounded-3xl shadow-lg border border-white/30 hover:brightness-110 hover:cursor-pointer gap-4 text-white/80 z-50 w-fit"
             >
               <WhatsApp className="w-7 h-7" />
-              Agendar minha consulta
+              Quero agendar minha consulta
             </button>
           </div>
         </div>
@@ -101,7 +101,7 @@ function MainHero() {
         className="lg:hidden absolute flex items-center bg-vitoria-yellow p-4 rounded-3xl shadow-lg border border-white/30 hover:brightness-110 hover:cursor-pointer gap-4 text-white/80 left-1/2 transform -translate-x-1/2 w-fit truncate bottom-17 z-50"
       >
         <WhatsApp className="w-7 h-7" />
-        Agendar minha consulta
+        Quero agendar minha consulta
       </button>
 
       <div className="lg:hidden absolute -bottom-24 left-1/2 transform -translate-x-1/2 z-30 w-[85%] flex flex-col">
