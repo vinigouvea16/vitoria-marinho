@@ -44,7 +44,7 @@ function AboutIntro() {
 
       <div className="absolute bottom-0 lg:-right-40 lg:-left-0 -left-30 h-full flex items-end justify-end">
         <Image
-          src="/vitoria-fundo-2.png"
+          src="/vitoria-fundo-2.webp"
           width={1717}
           height={1104}
           alt={''}

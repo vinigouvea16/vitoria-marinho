@@ -73,7 +73,7 @@ function MainHero() {
 
         <div className="absolute inset-0 lg:left-10 lg:-bottom-110 flex lg:justify-centers justify-center">
           <Image
-            src="/vitoria-fundo.png"
+            src="/vitoria-fundo.webp"
             width={400}
             height={800}
             priority
