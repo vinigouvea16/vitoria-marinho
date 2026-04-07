@@ -47,6 +47,7 @@ function AboutIntro() {
           src="/vitoria-fundo-2.webp"
           width={1717}
           height={1104}
+          priority
           alt={''}
           className="z-0 object-cover lg:h-full h-[75%] w-auto"
         />
