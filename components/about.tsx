@@ -69,9 +69,9 @@ function Benefits() {
 
   return (
     <div className="h-full lg:h-screen bg-vitoria-brown items-center justify-evenly flex flex-col">
-      <h1 className="text-vitoria-text text-4xl lg:mt-20 hidden lg:block">
+      <h2 className="text-vitoria-text text-4xl lg:mt-20 hidden lg:block">
         Benefícios do atendimento
-      </h1>
+      </h2>
       <section className="w-full p-8">
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-4 block lg:hidden text-vitoria-text text-base/9 font-light tracking-wide my-10">
@@ -98,10 +98,10 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h3 className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
+                <p className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
                   Acompanhamento próximo, com plano terapêutico ajustado à sua
                   realidade
-                </h3>
+                </p>
               </div>
             </div>
 
@@ -136,10 +136,10 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h4 className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
+                <p className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
                   Foco em redução do sofrimento psíquico e fortalecimento
                   emocional
-                </h4>
+                </p>
               </div>
             </div>
 
@@ -149,9 +149,9 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h5 className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
+                <p className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
                   Tratamentos baseados em evidências científicas
-                </h5>
+                </p>
               </div>
             </div>
 
@@ -161,9 +161,9 @@ function Benefits() {
                 <Borboleta className="lg:h-10 lg:w-10 h-8 w-8 text-vitoria-brown" />
               </div>
               <div className="lg:text-center">
-                <h6 className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
+                <p className="text-lg lg:w-2/3 mx-auto text-vitoria-text text-center lg:text-left">
                   Escuta qualificada e sem julgamentos
-                </h6>
+                </p>
               </div>
             </div>
           </div>

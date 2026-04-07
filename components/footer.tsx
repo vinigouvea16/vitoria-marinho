@@ -35,6 +35,7 @@ export default function Footer() {
               className="hover:font-bold "
               target="_blank"
               href="https://wa.me/5584996800712"
+              aria-label="Agende sua consulta com a Dr Vitória através desse link"
               rel="noreferrer"
             >
               contato
@@ -61,10 +62,16 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-2 items-center text-vitoria-text mx-auto lg:mx-0 h-[66px]">
-          <a href="https://wa.me/5584996800712">
+          <a
+            href="https://wa.me/5584996800712"
+            aria-label="Agende sua consulta com a Dr Vitória através desse link"
+          >
             <WhatsApp className="size-6 " />
           </a>
-          <a href="https://www.instagram.com/vitoriamarinho">
+          <a
+            href="https://www.instagram.com/vitoriamarinho"
+            aria-label="Acesse a pagina do Instagram da Dr. Vitória Marinho"
+          >
             <Instagram className="size-6" />
           </a>
         </div>
