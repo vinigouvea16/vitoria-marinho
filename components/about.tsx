@@ -48,6 +48,8 @@ function AboutIntro() {
           width={1717}
           height={1104}
           priority
+          quality={75}
+          sizes="(max-width: 1024px) 100vw, 50vw"
           alt={''}
           className="z-0 object-cover lg:h-full h-[75%] w-auto"
         />

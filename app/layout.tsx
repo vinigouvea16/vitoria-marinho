@@ -1,23 +1,18 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist } from 'next/font/google'
 import './globals.css'
 import { Merriweather } from 'next/font/google'
 import Script from 'next/script'
 
 const merriweather = Merriweather({
   subsets: ['latin'],
-  weight: ['300', '400', '700', '900'],
+  weight: ['300', '400', '700'],
   variable: '--font-merriweather',
   display: 'swap',
 })
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
   subsets: ['latin'],
 })
 
@@ -48,7 +43,7 @@ export default function RootLayout({
       </Script>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
+        className={`${geistSans.variable} ${merriweather.variable} antialiased`}
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

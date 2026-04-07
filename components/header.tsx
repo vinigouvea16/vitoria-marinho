@@ -9,20 +9,28 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
+    let ticking = false
+
     const controlHeader = () => {
-      const currentScrollY = window.scrollY
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY
 
-      if (currentScrollY < lastScrollY || currentScrollY < 10) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-        setIsMenuOpen(false)
+          if (currentScrollY < lastScrollY || currentScrollY < 10) {
+            setIsVisible(true)
+          } else {
+            setIsVisible(false)
+            setIsMenuOpen(false)
+          }
+
+          setLastScrollY(currentScrollY)
+          ticking = false
+        })
+        ticking = true
       }
-
-      setLastScrollY(currentScrollY)
     }
 
-    window.addEventListener('scroll', controlHeader)
+    window.addEventListener('scroll', controlHeader, { passive: true })
 
     return () => {
       window.removeEventListener('scroll', controlHeader)
@@ -161,7 +169,6 @@ export default function Header() {
                 src="/logo1.png"
                 width={120}
                 height={54}
-                unoptimized
                 alt="logo da psiquiatra vitoria marinho"
                 className="w-[120px] h-[54px] mx-auto object-contain"
               />

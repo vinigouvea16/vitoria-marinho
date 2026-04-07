@@ -76,8 +76,10 @@ function MainHero() {
             src="/vitoria-fundo.webp"
             width={400}
             height={800}
+            fetchPriority="high"
             priority
-            quality={100}
+            quality={75}
+            sizes="(max-width: 1024px) 400px, 50vw"
             alt="Imagem da Dra. Vitória"
             className="lg:object-contain mt-40 lg:mt-0 object-cover z-10 lg:h-full lg:w-auto w-[400px] h-[800px] "
           />
